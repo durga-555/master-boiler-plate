@@ -1,0 +1,24 @@
+class Sand{
+    constructor(x,y,r){
+       var optons={
+        restitution:0.3,
+        friction:5,
+        density:1
+      }  
+      this.x=x
+       this.y=y
+       this.r=r
+       this.body=Bodies.circle(this.x,this.y,(this.r-20)/2,options);
+   }
+    display(){
+       var sandpos = this.body.position;
+       push();
+       translate(sandpos.x,sandpos.y);
+       rectMode(CENTRE);
+       strokeWeight(4);
+       stroke("black")
+       fill("red");
+       ecllipse(0,0,this.r,this.r);
+       pop();
+    }
+ }
